@@ -6,7 +6,7 @@ interface MongooseConnection {
   conn: Mongoose | null;
   promise: Promise<Mongoose> | null;
 }
-
+// global 是一个全局对象
 let cached: MongooseConnection = (global as any).Mongoose;
 
 if (!cached) {
